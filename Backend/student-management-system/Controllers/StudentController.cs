@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using student_management_system.Model;
+using student_management_system.Service;
 
 namespace student_management_system.Controllers;
 
@@ -7,6 +8,12 @@ namespace student_management_system.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class StudentController : ControllerBase {
+
+    private readonly IStudentService studentService;
+
+    public StudentController(IStudentService studentService){
+        this.studentService = studentService;
+    }
 
     [HttpGet] 
     public ActionResult<List<Student>> GetAllStudents(){
@@ -19,7 +26,7 @@ public class StudentController : ControllerBase {
     }
 
     [HttpPut("{id}")]
-    public ActionResult<Student> UpdateStudent(string id){
+    public ActionResult<Student> UpdateStudent(string id,[FromBody] Student student){
         return NoContent();
     }
 
