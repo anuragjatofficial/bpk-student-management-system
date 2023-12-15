@@ -207,3 +207,5 @@ C:\Users\Anurag Choudhary\OneDrive\Desktop\.NET_Framework\bpk-student-management
 C:\Users\Anurag Choudhary\OneDrive\Desktop\.NET_Framework\bpk-student-management-system\Backend\student-management-system\obj\Debug\net8.0\student-management-system.pdb
 C:\Users\Anurag Choudhary\OneDrive\Desktop\.NET_Framework\bpk-student-management-system\Backend\student-management-system\obj\Debug\net8.0\student-management-system.genruntimeconfig.cache
 C:\Users\Anurag Choudhary\OneDrive\Desktop\.NET_Framework\bpk-student-management-system\Backend\student-management-system\obj\Debug\net8.0\ref\student-management-system.dll
+C:\Users\Anurag Choudhary\OneDrive\Desktop\.NET_Framework\bpk-student-management-system\backend\student-management-system\bin\Debug\net8.0\DotNetEnv.dll
+C:\Users\Anurag Choudhary\OneDrive\Desktop\.NET_Framework\bpk-student-management-system\backend\student-management-system\bin\Debug\net8.0\Sprache.dll

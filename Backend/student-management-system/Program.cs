@@ -4,7 +4,21 @@ using student_management_system.Exceptions;
 using student_management_system.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+DotNetEnv.Env.Load();
+var configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+    .AddEnvironmentVariables()
+    .Build();
+
+var server = configuration["DB_SERVER"];
+var port = configuration["DB_PORT"];
+var database = configuration["DB_NAME"];
+var user = configuration["DB_USER"];
+var password = configuration["DB_PASSWORD"];
+
+// var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = $"server={server};port={port};database={database};User={user};Password={password};";
 
 // Add services to the container.
 
@@ -19,11 +33,9 @@ builder.Services.AddExceptionHandler<AppExceptionHandler>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseExceptionHandler(_ => { });
 
