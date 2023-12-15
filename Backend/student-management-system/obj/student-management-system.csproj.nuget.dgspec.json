@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\student-management-system.csproj": {}
+    "C:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\student-management-system.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\student-management-system.csproj": {
+    "C:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\student-management-system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\student-management-system.csproj",
+        "projectUniqueName": "C:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\student-management-system.csproj",
         "projectName": "student-management-system",
-        "projectPath": "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\student-management-system.csproj",
+        "projectPath": "C:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\student-management-system.csproj",
         "packagesPath": "C:\\Users\\Anurag Choudhary\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\obj\\",
+        "outputPath": "C:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Anurag Choudhary\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SDU7p8zJDvfqDxdJa41FPMjrw3IhBUDQXUnEiTaLR3ft08lqHPvxr+ex7eIUWiYah6EptN11xmkUDRBQtWWN3A==",
+  "dgSpecHash": "Z06dc4APKPIqy0tOb0NTCCLAQu/RZZt/K4/estBygXFQa5UJ05yUyLkUAp7HAqYDVilSwutHIcrISXOtt7mSIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\student-management-system.csproj",
+  "projectFilePath": "C:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\student-management-system.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anurag Choudhary\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Anurag Choudhary\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

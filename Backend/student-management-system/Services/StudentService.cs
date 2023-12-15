@@ -15,6 +15,11 @@ namespace student_management_system.Services
 
         public Student AddStudent(Student student)
         {
+            if(student.StudentGender!="MALE" && student.StudentGender != "FEMALE")
+            {
+                throw new InvalidGenderException("please pass the valid value for gender ");
+            }
+
             _studentDbContext.Students.Add(student);
             _studentDbContext.SaveChanges();
             return student;
@@ -42,7 +47,15 @@ namespace student_management_system.Services
 
         public Student GetStudent(string id)
         {
-            return _studentDbContext.Students.First(s => s.StudentId.ToString() == id);
+            Student st = _studentDbContext.Students.FirstOrDefault(s => s.StudentId.ToString() == id);
+            if(st!=null)
+            {
+                return st;
+            }
+            else
+            {
+                throw new StudentNotFoundException($"Can't find any student with id {id}");
+            }
         }
 
         public Student UpdateStudent(string id, Student student)

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using student_management_system.Data;
+using student_management_system.Exceptions;
 using student_management_system.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddDbContext<StudentDbContext>(options=>options.UseMySql(connectionString,ServerVersion.AutoDetect(connectionString)));
+builder.Services.AddExceptionHandler<AppExceptionHandler>();
 
 var app = builder.Build();
 
@@ -22,6 +24,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseExceptionHandler(_ => { });
 
 app.UseHttpsRedirection();
 
