@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\student-management-system.csproj": {}
+    "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\student-management-system.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\student-management-system.csproj": {
+    "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\student-management-system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\student-management-system.csproj",
+        "projectUniqueName": "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\student-management-system.csproj",
         "projectName": "student-management-system",
-        "projectPath": "c:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\student-management-system.csproj",
+        "projectPath": "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\student-management-system.csproj",
         "packagesPath": "C:\\Users\\Anurag Choudhary\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Anurag Choudhary\\OneDrive\\Desktop\\.NET_Framework\\bpk-student-management-system\\Backend\\student-management-system\\obj\\",
+        "outputPath": "C:\\Users\\Anurag Choudhary\\source\\repos\\student-management-system\\student-management-system\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Anurag Choudhary\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Anurag Choudhary\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,10 +40,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -54,11 +52,11 @@
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
-              "version": "[7.0.0, )"
+              "version": "[8.0.0-beta.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -80,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\Anurag Choudhary\\AppData\\Roaming\\.dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

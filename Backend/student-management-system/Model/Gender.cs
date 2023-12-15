@@ -1,8 +1,8 @@
-namespace student_management_system.Model;
-
-public enum Gender
+﻿namespace student_management_system
 {
-    MALE,
-    FEMALE
+    public enum Gender
+    {
+        MALE,
+        FEMALE
+    }
 }
-
