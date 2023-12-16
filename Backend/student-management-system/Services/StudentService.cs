@@ -47,7 +47,9 @@ namespace student_management_system.Services
 
         public Student GetStudent(string id)
         {
+            
             Student st = _studentDbContext.Students.FirstOrDefault(s => s.StudentId.ToString() == id);
+
             if(st!=null)
             {
                 return st;
@@ -56,11 +58,14 @@ namespace student_management_system.Services
             {
                 throw new StudentNotFoundException($"Can't find any student with id {id}");
             }
+
         }
 
         public Student UpdateStudent(string id, Student student)
         {
+
             Student st = _studentDbContext.Students.FirstOrDefault(s=>s.StudentId.ToString()==id);
+
             if (st != null)
             {
                 st.FirstName = student.FirstName;
@@ -75,6 +80,7 @@ namespace student_management_system.Services
             {
                 throw new StudentNotFoundException($"Can't find any student with id {id}");
             }
+
         }
     }
 }
