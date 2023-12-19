@@ -33,10 +33,6 @@
                                 </th>
                                 <th
                                     class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                                    dob
-                                </th>
-                                <th
-                                    class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                                     Gender
                                 </th>
                                 <th
@@ -55,9 +51,11 @@
                         </thead>
 
                         <tbody>
-                            <!-- {students.map((e: any) => (
-                            <TableRows e={e} setStudents={setStudents} key={e.student_id} />
-                            ))} -->
+                            
+
+                            <div *ngFor="let student of students">
+                            <app-student-row [student]="student"></app-student-row>
+                            </div>
                         </tbody>
                     </table>
                 </div>

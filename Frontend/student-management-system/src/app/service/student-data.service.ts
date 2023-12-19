@@ -15,4 +15,8 @@ export class StudentDataService {
   addStudent(student: Student) {
     return this.http.post(`${this.apiURL}/student`, student);
   }
+
+  getStudents(){
+    return this.http.get(`${this.apiURL}/student`);
+  }
 }

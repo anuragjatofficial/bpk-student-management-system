@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Student } from '../../../Models/Student';
 
 @Component({
   selector: 'app-student-row',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class StudentRowComponent {
 
+  @Input() student!:Student;
 }

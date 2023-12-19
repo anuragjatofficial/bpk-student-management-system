@@ -1,6 +1,5 @@
 <main class="main">
-  <app-add-student></app-add-student>
-  <app-student-table></app-student-table>
+  <app-add-student  [students]="students" (afterStudentAdd)="getStudents()" ></app-add-student>
+  <app-student-table [students]="students"></app-student-table>
 </main>
-
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->

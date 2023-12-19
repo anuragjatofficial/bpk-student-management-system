@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Student } from '../../Models/Student';
 import { FormsModule } from '@angular/forms';
 import { StudentDataService } from '../../service/student-data.service';
@@ -26,11 +26,14 @@ import{ NoopAnimationsModule } from '@angular/platform-browser/animations'
   styleUrl: './add-student.component.css',
 })
 export class AddStudentComponent {
+  @Input() students!: Student[];
+  @Output() public afterStudentAdd = new EventEmitter(); // Specify any or the data type emitted
+
   student: Student = {
-    firstname: '',
-    lastname: '',
+    firstName: '',
+    lastName: '',
     phone: '',
-    gender: '',
+    studentGender: '',
     address: '',
   };
   streetAddress: string = '';
@@ -54,36 +57,38 @@ export class AddStudentComponent {
         console.log(response);
         this.addStudentLoading = false;
         this.showSuccess();
+        this.refresh();
+        console.log(this.students);
       },
       (err) => {
         console.log('error', err);
         this.addStudentLoading = false;
-       let {error} = err;
-       let {errors}  = error;
-       console.log(errors);
-        let message = "";
+        let { error } = err;
+        let { errors } = error;
+        console.log(errors);
+        let message = '';
 
-        for(let e in errors){
-          message += "error : "
+        for (let e in errors) {
+          message += 'error : ';
           errors[e].forEach((el: string) => {
             message += el;
           });
-          message += "\n"
+          message += '\n';
         }
 
         this.showError(message);
         this.resetForm();
-      },()=>{
+      },
+      () => {
         this.resetForm();
       }
     );
   }
   resetForm() {
-    
-    this.student.firstname = '';
-    this.student.lastname = '';
+    this.student.firstName = '';
+    this.student.lastName = '';
     this.student.address = '';
-    this.student.gender = 'MALE';
+    this.student.studentGender = 'MALE';
     this.student.phone = '';
     this.city = '';
     this.state = '';
@@ -99,7 +104,7 @@ export class AddStudentComponent {
     });
   }
 
-  showError(message:string){
+  showError(message: string) {
     this.messageService.add({
       severity: 'error',
       summary: 'Unble to add Student',
@@ -107,4 +112,7 @@ export class AddStudentComponent {
     });
   }
 
+  refresh(){
+    this.afterStudentAdd.emit();
+  }
 }
