@@ -8,6 +8,7 @@ import { ToastModule } from 'primeng/toast';
 import { StudentTableComponent } from './components/student-table/student-table.component';
 import { StudentDataService } from './service/student-data.service';
 import { Student } from './Models/Student';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,7 @@ export class AppComponent implements OnInit{
     this.studentService = studentService;  
   }
   ngOnInit(): void {
+    initFlowbite();
     this.getStudents();
   }
 
