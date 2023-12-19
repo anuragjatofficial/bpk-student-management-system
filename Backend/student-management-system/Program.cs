@@ -29,6 +29,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IStudentService, StudentService>();
 builder.Services.AddDbContext<StudentDbContext>(options=>options.UseMySql(connectionString,ServerVersion.AutoDetect(connectionString)));
 builder.Services.AddExceptionHandler<AppExceptionHandler>();
+builder.Services.AddCors(options=>
+{
+    options.AddPolicy("AllowOrigin", builder =>
+    {
+        builder
+        .AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
@@ -36,6 +46,8 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
+
+app.UseCors("AllowOrigin");
 
 app.UseExceptionHandler(_ => { });
 
