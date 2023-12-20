@@ -1,5 +1,10 @@
 <main class="main">
+<div class="py-3 shadow-md text-center mb-3">
+  <h2 class="text-2xl sm:text-2xl md:text-3xl  font-normal  tracking-tight text-black " style="font-family: 'Ubuntu', sans-serif">
+    Student Management App
+  </h2>
+</div>
+
   <app-add-student  [students]="students" (afterStudentAdd)="getStudents()" ></app-add-student>
-  <app-student-table [students]="students"></app-student-table>
+  <app-student-table [students]="students" (onStudentUpdate)="getStudents()"></app-student-table>
 </main>
-<!-- <router-outlet></router-outlet> -->

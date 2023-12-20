@@ -54,8 +54,8 @@
                             
 
                             <div *ngFor="let student of students">
-                            <app-student-row [student]="student"></app-student-row>
-                            <app-student-drawer [student]="student"></app-student-drawer>
+                            <app-student-row [student]="student" (afterUpdateStudent)="updateStudent()" ></app-student-row>
+                            <!-- <app-student-drawer [student]="student"></app-student-drawer> -->
                         </div>
                     </tbody>
                 </table>
@@ -63,10 +63,5 @@
         </div>
     </div>
 </section>
-<!-- <app-student-drawer [student]='{studentId:"123",firstName: "ANurag",
-  lastName: "",
-  phone: "",
-  studentGender: "",
-  address: ""}'></app-student-drawer> -->
-    
+
 </div>

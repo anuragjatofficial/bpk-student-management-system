@@ -15,7 +15,7 @@
 <div id="{{student.studentId}}"
     class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800"
     tabindex="-1" attr.aria-labelledby="{{student.studentId}}">
-    <h5 id="{{student.studentId}}"
+    <h5 id="{{student.firstName+student.lastName+student.studentId}}"
         class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg
             class="w-4 h-4 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
             viewBox="0 0 20 20">
@@ -33,33 +33,33 @@
     <form class="mb-6">
         <div class="mb-6">
             <label for="firstname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
-            <input type="text" id="firstname"
+            <input type="text"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
                 placeholder="Apple Keynote" required>
         </div>
         <div class="mb-6">
             <label for="lastname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
-            <input type="text" id="lastname"
+            <input type="text" 
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
                 placeholder="Apple Keynote" required>
         </div>
         <div class="mb-6">
             <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone</label>
-            <input type="text" id="phone"
+            <input type="text" 
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-500 focus:border-indigo-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
                 placeholder="" required>
         </div>
         <div class="mb-6">
             <label for="address"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">address</label>
-            <textarea id="address" rows="4"
+            <textarea rows="4"
                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500"
                 placeholder="Write address..."></textarea>
         </div>
         
         <div class="mb-10">
             <label for="gender" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select gender</label>
-            <select id="gender" name="gender"
+            <select name="gender"
                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-indigo-500 dark:focus:border-indigo-500">
                 <option value="MALE">MALE</option>
                 <option value="FEMALE">FEMALE</option>

@@ -20,4 +20,13 @@ export class StudentDataService {
   getStudents() {
     return this.http.get(`${this.apiURL}/student`);
   }
+
+  updateStudent(student:Student){
+    return this.http.put(`${this.apiURL}/student/${student.studentId}`,student);
+  }
+
+  deleteStudent(studentId:string){
+    return this.http.delete(`${this.apiURL}/student/${studentId}`);
+  }
+
 }
