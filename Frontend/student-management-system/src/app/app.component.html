@@ -7,7 +7,33 @@
     </h2>
   </div>
 
-  <app-add-student [students]="students" (afterStudentAdd)="getStudents()"></app-add-student>
-  <app-student-table [students]="students" (onStudentUpdate)="getStudents()"></app-student-table>
+  <div *ngIf="isDataLoaded;else loader"  >
+    <app-add-student [students]="students" (afterStudentAdd)="getStudents()"></app-add-student>
+    <app-student-table [students]="students" (onStudentUpdate)="getStudents()"></app-student-table>
+  </div>
+
+
+
+  <ng-template #loader>
+    <div class="w-full flex items-center h-[90vh]" #loader>
+      <div class="w-full">
+        <section class="dots-container">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </section>
+        <div class="text-xl  mt-4 pb-2 text-center font-semibold ">Please wait...</div>
+        <p class="pb-3 text-zinc-400 text-center font-medium ">
+          Fact : {{
+          itIndustryFacts[getRandomFact()]
+          }}
+        </p>
+      </div>
+    
+    </div>
+  </ng-template>
+  
 </main>
 <router-outlet></router-outlet>

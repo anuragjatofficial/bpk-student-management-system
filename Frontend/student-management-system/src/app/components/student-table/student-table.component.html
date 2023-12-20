@@ -20,9 +20,9 @@
                 </div>
 
                 <div class="block w-full overflow-x-auto">
-                    <table class="items-center bg-transparent w-full border-collapse ">
-                        <thead>
-                            <tr>
+                    <table class="items-center bg-transparent w-full border-collapse table-auto">
+                        <!-- <thead>
+                            <tr class=" border-y-2">
                                 <th
                                     class="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
                                     Student Name
@@ -48,14 +48,13 @@
                                     Delete
                                 </th>
                             </tr>
-                        </thead>
+                        </thead> -->
 
                         <tbody>
                             
 
                             <div *ngFor="let student of students">
                             <app-student-row [student]="student" (afterUpdateStudent)="updateStudent()" ></app-student-row>
-                            <!-- <app-student-drawer [student]="student"></app-student-drawer> -->
                         </div>
                     </tbody>
                 </table>

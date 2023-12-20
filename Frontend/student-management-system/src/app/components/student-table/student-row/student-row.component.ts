@@ -7,19 +7,26 @@ import { StudentDataService } from '../../../service/student-data.service';
 import { MessageService } from 'primeng/api';
 import { Toast,ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-student-row',
   standalone: true,
   providers: [MessageService],
-  imports: [StudentDrawerComponent, FormsModule, ToastModule,MessagesModule],
+  imports: [
+    StudentDrawerComponent,
+    FormsModule,
+    ToastModule,
+    MessagesModule,
+    CommonModule,
+  ],
   templateUrl: './student-row.component.html',
   styleUrl: './student-row.component.css',
 })
 export class StudentRowComponent {
   @Input() student!: Student;
   @Output() afterUpdateStudent = new EventEmitter();
-
+  updateStudentLoading:boolean = false;
   studentInput: StudentInput = {
     firstName: this.student?.firstName,
     lastName: this.student?.lastName,
@@ -47,7 +54,7 @@ export class StudentRowComponent {
   }
 
   updateStudent() {
-    console.log('update ');
+    this.updateStudentLoading = true;
 
     const st: Student = {
       studentId: this.student.studentId,
@@ -60,30 +67,35 @@ export class StudentRowComponent {
     this.studentDataService.updateStudent(st).subscribe({
       next: (res) => {
         console.log(this.messageService);
-        this.showSuccess();
+        this.updateStudentLoading = false;
+        this.showSuccess("updated");
+        this.refresh();
       },
-      error: (err) => {},
+      error: (err) => {
+        this.updateStudentLoading = false;
+        this.showError(err.toString());
+      },
       complete: () => {},
     });
   }
 
-  deleteStudent(){
+  deleteStudent() {
     this.studentDataService.deleteStudent(this.student.studentId).subscribe({
-      next:(res)=>{
-        this.showSuccess();
+      next: (res) => {
+        this.showSuccess("deleted");
         this.refresh();
       },
-      error:(err)=>{
+      error: (err) => {
         this.showError(err.toString());
       },
-    })
+    });
   }
 
-  showSuccess() {
+  showSuccess(action:string) {
     this.messageService.add({
       severity: 'success',
-      summary: 'Student updated ',
-      detail: 'Succesfully updated student  ',
+      summary: `Student ${action}`,
+      detail: `Succesfully ${action} student`,
     });
   }
 
