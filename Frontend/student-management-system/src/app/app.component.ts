@@ -41,6 +41,8 @@ export class AppComponent implements OnInit{
     this.studentService.getStudents().subscribe({
       next: (data:any) => {
         this.students = data;
+        console.log(data);
+        
       },
       error: (e) => console.error(e),
       complete: () => console.info('complete'),

@@ -9,6 +9,7 @@ import { Toast, ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 import{ NoopAnimationsModule } from '@angular/platform-browser/animations'
+import { StudentInput } from '../../Models/StudentInput';
 
 @Component({
   selector: 'app-add-student',
@@ -29,7 +30,7 @@ export class AddStudentComponent {
   @Input() students!: Student[];
   @Output() public afterStudentAdd = new EventEmitter(); // Specify any or the data type emitted
 
-  student: Student = {
+  student: StudentInput = {
     firstName: '',
     lastName: '',
     phone: '',
